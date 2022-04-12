@@ -90,7 +90,7 @@ body {
 }
 nav{
 	position: relative;
-	margin: 270px auto 0;
+	margin: 27px auto 0;
 	width: 590px;
 	height: 50px;
 	background: #34495e;
@@ -155,3 +155,4 @@ nav .start-Portfolio,a:nth-child(5):hover~.animation{
 	width: 120px;
 	left: 470px;
 }
+

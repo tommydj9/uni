@@ -1,4 +1,5 @@
 
+
 const serverAddress = 'http://127.0.0.1:5000' // 127.0.0.1 è in HTTP l'indirizzo locale
 // Cioè localhost
 // Cioè, il tuo computer
@@ -11,7 +12,7 @@ axios.get(serverAddress + "/universities")
     // handle success
     console.log(response);
 
-    document.getElementById("universities-list").innerHTML = "i"  // Qui avrai in mano quella div...
+    document.getElementById("universities-list").innerHTML = "ohh ispndi"  // Qui avrai in mano quella div...
     // Poi però che ci fai?
     // Per ogni università, devi aggiungere qualcosa a quella div
     // Creare dei children
@@ -81,3 +82,5 @@ function showSuggestions(list){
     }
     suggBox.innerHTML = listData;
 }
+
+
