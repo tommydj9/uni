@@ -35,3 +35,17 @@ axios.get(serverAddress + "/universities")
         // handle error
         console.log(error);
     })
+
+function changePage() {
+    window.open('./learnMore.html');
+}
+
+universities.addEventListener('click', function () {
+    changePage();
+});
+
+let learn = document.getElementById("nameLearnMore");
+learn.innerHTML = listOfUniversities;
+
+
+
