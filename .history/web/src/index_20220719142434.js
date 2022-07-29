@@ -76,9 +76,6 @@ function getUniversities() {
 }
 
 function onSearchInputKeyUp(e) {
-
-
-
     if (e.key === 'Enter') {
         getUniversities();
     }

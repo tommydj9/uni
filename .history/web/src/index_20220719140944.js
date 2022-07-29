@@ -45,11 +45,9 @@ function getUniversities() {
 
                 document.getElementById("universities").replaceChildren([]);
 
-                console.log(listOfUniversities.length);
+                const listOfUniversities = response.data.universities;
 
-
-
-                for (let i = 0; i < 19590; i++) {
+                for (let i = 0; i < 2; i++) {
 
                     const university = listOfUniversities[i]
                     const universityNode = document.createElement('div');
@@ -76,14 +74,9 @@ function getUniversities() {
 }
 
 function onSearchInputKeyUp(e) {
-
-
-
     if (e.key === 'Enter') {
         getUniversities();
     }
-
-
 
     if (e.key.value === 'ciao') {
         alert('ciao');

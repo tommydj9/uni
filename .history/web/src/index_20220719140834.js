@@ -6,7 +6,34 @@ const serverAddress = 'http://127.0.0.1:5000' // 127.0.0.1 è in HTTP l'indirizz
 // Ci va bene solo finché siamo in fase di sviluppo e lavoriamo sul nostro computer.
 function getUniversities() {
 
+    let btnAll = document.getElementById('allBtn');
 
+
+    btnAll.addEventListener('click', function all() {
+
+        document.getElementById("universities").replaceChildren([]);
+
+        const listOfUniversities = response.data.universities;
+
+        for (let i = 0; i < 2; i++) {
+
+            const university = listOfUniversities[i]
+            const universityNode = document.createElement('div');
+            const universityTitleNode = document.createElement('h2');
+            const universityImageNode = document.createElement('img');
+            const universityDescriptionNode = document.createElement('p');
+            universityTitleNode.innerText = university.name;
+            universityImageNode.src = university.imgSrc;
+            universityDescriptionNode.innerText = university.description;
+            universityNode.classList.add('university');
+            universityNode.appendChild(universityTitleNode);
+            universityNode.appendChild(universityImageNode);
+            universityNode.appendChild(universityDescriptionNode);
+
+            document.getElementById("universities").appendChild(universityNode);
+        }
+
+    });
 
     const searchInput = document.getElementById('search-input-text').value;
 
@@ -37,37 +64,6 @@ function getUniversities() {
                 document.getElementById("universities").appendChild(universityNode);
 
             }
-
-            let btnAll = document.getElementById('allBtn');
-
-
-            btnAll.addEventListener('click', function all() {
-
-                document.getElementById("universities").replaceChildren([]);
-
-                console.log(listOfUniversities.length);
-
-
-
-                for (let i = 0; i < 19590; i++) {
-
-                    const university = listOfUniversities[i]
-                    const universityNode = document.createElement('div');
-                    const universityTitleNode = document.createElement('h2');
-                    const universityImageNode = document.createElement('img');
-                    const universityDescriptionNode = document.createElement('p');
-                    universityTitleNode.innerText = university.name;
-                    universityImageNode.src = university.imgSrc;
-                    universityDescriptionNode.innerText = university.description;
-                    universityNode.classList.add('university');
-                    universityNode.appendChild(universityTitleNode);
-                    universityNode.appendChild(universityImageNode);
-                    universityNode.appendChild(universityDescriptionNode);
-
-                    document.getElementById("universities").appendChild(universityNode);
-                }
-
-            });
         })
         .catch(function (error) {
             // handle error
@@ -76,14 +72,9 @@ function getUniversities() {
 }
 
 function onSearchInputKeyUp(e) {
-
-
-
     if (e.key === 'Enter') {
         getUniversities();
     }
-
-
 
     if (e.key.value === 'ciao') {
         alert('ciao');

@@ -8,14 +8,14 @@
     <script
         src="https://www.paypal.com/sdk/js?currency=EUR&client-id=AZbQf2h4WLUE7lwBxebCJWNSLEYMesqV7qYDUrsoXlOufXFbfVPfuE2aDR5MG9r2-0XciELr0Ct12EsK"></script>
     <script src="app.js"></script>
-    <link rel="stylesheet" href="style.css">
 
     <title>PayPal</title>
 </head>
 
 <body>
-
-    <button onClick="generatePayment()">paga</button>
+    <div style="background-color: green; display: none" id="transition">Grazie per il pagamento</div>
+    <input type="text" id="payInput"><button
+        onClick="generatePayment(document.getElementById('payInput').value)">paga</button>
     <div id="paypal-button-container"></div>
 
 </body>

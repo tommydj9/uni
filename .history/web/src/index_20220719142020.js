@@ -76,14 +76,9 @@ function getUniversities() {
 }
 
 function onSearchInputKeyUp(e) {
-
-
-
     if (e.key === 'Enter') {
         getUniversities();
     }
-
-
 
     if (e.key.value === 'ciao') {
         alert('ciao');

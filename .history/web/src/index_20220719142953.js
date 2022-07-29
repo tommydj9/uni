@@ -77,37 +77,44 @@ function getUniversities() {
 
 function onSearchInputKeyUp(e) {
 
+    try {
+
+        if (e.key === 'Enter') {
+            getUniversities();
 
 
-    if (e.key === 'Enter') {
-        getUniversities();
+        }
+    catch (e) {
+            console.log(error);
+        }
+
+
+
+
+
+        if (e.key.value === 'ciao') {
+            alert('ciao');
+        }
+
+
+        if (e.key.value === 'ciao') {
+            getUniversities();
+        }
+
     }
-
-
-
-    if (e.key.value === 'ciao') {
-        alert('ciao');
-    }
-
-
-    if (e.key.value === 'ciao') {
-        getUniversities();
-    }
-
-}
 
 
 
 function onLoad() {
-    // Quello che vogliamo che succeda non appena la pagina ha finito di caricare la prima volta.
-    getUniversities();
-    let load = document.getElementById('');
-}
+        // Quello che vogliamo che succeda non appena la pagina ha finito di caricare la prima volta.
+        getUniversities();
+        let load = document.getElementById('');
+    }
 
-window.onload = onLoad;
+    window.onload = onLoad;
 
 
-$(window).on("load", function () {
-    $(".loader-wrapper").fadeOut("slow");
-})
+    $(window).on("load", function () {
+        $(".loader-wrapper").fadeOut("slow");
+    })
 

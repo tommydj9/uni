@@ -78,10 +78,15 @@ function getUniversities() {
 function onSearchInputKeyUp(e) {
 
 
+    then(function (response) {
+        if (e.key === 'Enter') {
+            getUniversities();
+        }
+    })
+        .catch(function (error) {
+            alert('universities not found!')
+        })
 
-    if (e.key === 'Enter') {
-        getUniversities();
-    }
 
 
 

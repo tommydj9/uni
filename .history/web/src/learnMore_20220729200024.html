@@ -15,7 +15,8 @@
 
 <body>
 
-    <button onClick="generatePayment()">paga</button>
+    <input type="text" id="payInput"><button
+        onClick="generatePayment(document.getElementById('payInput').value)">paga</button>
     <div id="paypal-button-container"></div>
 
 </body>

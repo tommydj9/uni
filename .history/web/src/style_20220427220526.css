@@ -2,7 +2,6 @@ body {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #644bff;
-  color: rgb(0, 0, 0);
   padding: 20px;
 }
 
@@ -239,13 +238,6 @@ body {
   width: 100%;
   background-color: #fff;
   animation: loader-inner 2s infinite ease-in;
-}
-
-.allBtn {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  right: 100px;
 }
 
 @keyframes loader {
